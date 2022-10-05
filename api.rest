@@ -1,0 +1,65 @@
+POST http://localhost:8000/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "morar.eliza@example.com",
+    "password": "password"
+}
+
+###
+GET http://localhost:8000/api/units HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+
+###
+POST http://localhost:8000/api/units HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+Accept: application/json
+content-type: application/json
+
+{
+    "unit_name": "Unit W",
+    "floor": "n",
+    "area": "200m2"
+}
+
+###
+PUT http://localhost:8000/api/units/11 HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+Accept: application/json
+content-type: application/json
+
+{
+    "unit_name": "Unit M",
+    "floor": 5,
+    "area": "200m2"
+}
+
+###
+GET http://localhost:8000/api/tenants/7 HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+
+###
+POST http://localhost:8000/api/tenants HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+Accept: application/json
+content-type: application/json
+
+{
+    "company": "PT Maju bersama",
+    "email": "majubersama@gmail.com",
+    "phone": "8931002134",
+    "address": "Bandung"
+}
+
+###
+PUT http://localhost:8000/api/tenants/6 HTTP/1.1
+Authorization: Bearer 14|n1uf2NnqNsX0dxBBe69tA3Pfv4N4YxrCmxmoFGWE
+Accept: application/json
+content-type: application/json
+
+{
+    "company": "PT Maju sukses",
+    "email": "majusukses@gmail.com",
+    "phone": "8931002134",
+    "address": "Bandung"
+}
